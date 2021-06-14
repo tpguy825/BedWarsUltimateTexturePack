@@ -1,9 +1,7 @@
 #!/bin/bash
-
-$newdirname = ./texture-packs
-if [ -d "$newdirname" ]; then
+if [ -d "./texture-packs" ]; then
 echo "Directory already exists" ;
 else
-mkdir -p $newdirname
+mkdir -p ./texture-packs
 echo "$newdirname directory is created"
 fi
