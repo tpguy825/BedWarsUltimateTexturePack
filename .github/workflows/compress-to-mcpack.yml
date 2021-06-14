@@ -32,8 +32,10 @@ jobs:
         run: ls
         
       - name: test for and create directory
-        run: ./build/prepare-dir-mcpack.sh
-        
+        run: |
+         chmod +x ./build/*
+         ./build/prepare-dir-mcpack.sh
+         
       - name: Move file and rename
         run: mv bedwarsultimatetexturepack.zip ./texture-packs/bedwarsultimatetexturepack.mcpack
         
