@@ -40,7 +40,9 @@ jobs:
         run: mv bedwarsultimatetexturepack.zip ./texture-packs
         
       - name: Move file and rename (2/2)
-        run: mv ./texture-packs/bedwarsultimatetexturepack.zip bedwarsultimatetexturepack.mcpack
+        run: |
+         cd texture-packs
+         mv bedwarsultimatetexturepack.zip bedwarsultimatetexturepack.mcpack
         
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
