@@ -29,7 +29,7 @@ jobs:
         run: zip -rv bedwarsultimatetexturepack.zip manifest.json pack_icon.png textures/
          
       - name: Run a one-line script
-        run: mv bedwarsultimatetexturepack texture-packs/bedwarsultimatetexturepack.mcpack
+        run: mv bedwarsultimatetexturepack.zip texture-packs/bedwarsultimatetexturepack.mcpack
         
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
