@@ -24,11 +24,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      - name: Run a one-line script
+      
+      - name: add all files to zip
         run: zip -rv bedwarsultimatetexturepack.zip manifest.json pack_icon.png textures/
+        
+      - name: display all files for debugging
+        run: ls
          
-      - name: Run a one-line script
+      - name: Move file and rename
         run: mv bedwarsultimatetexturepack.zip texture-packs/bedwarsultimatetexturepack.mcpack
         
       - name: Upload a Build Artifact
