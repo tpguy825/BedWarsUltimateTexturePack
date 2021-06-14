@@ -30,9 +30,12 @@ jobs:
         
       - name: display all files for debugging
         run: ls
-         
+        
+      - name: test for and create directory
+        run: ./build/prepare-dir-mcpack.sh
+        
       - name: Move file and rename
-        run: mv bedwarsultimatetexturepack.zip texture-packs/bedwarsultimatetexturepack.mcpack
+        run: mv bedwarsultimatetexturepack.zip ./texture-packs/bedwarsultimatetexturepack.mcpack
         
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
